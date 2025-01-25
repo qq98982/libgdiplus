@@ -37,7 +37,8 @@
  * temporary, ARGB32 bitmap (32 times bigger, i.e. 8MB) may be allocated when 
  * converting the path into the region bitmap.
  */
-#define REGION_MAX_BITMAP_SIZE		(2 * 1024 * 1024 >> 3)
+/* value calculation 1073741824 = 65536 * 65536 >> 2 */
+#define REGION_MAX_BITMAP_SIZE		1073741824
 
 #define SHAPE_SIZE(shape)		(((shape)->Width * (shape)->Height) >> 3)
 
